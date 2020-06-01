@@ -1,0 +1,42 @@
+%btn {
+    border-radius: 5px;
+    padding: 6px 16px;
+    margin: 3px;
+    display: inline-block;
+    color: #fff;
+    font-weight: $fontweightBold;
+    font-size: $primaryfontSize;
+   
+}
+.btn-pmry{
+    @extend %btn;
+    background: $primaryHover;
+}
+%btn2{
+    border: 1px solid $primaryHover;
+    color: $primaryHover;
+    &:hover{
+        background: $primaryHover;
+    }
+}
+
+.btn-secndry{
+    @extend %btn2;
+    @extend %btn;
+}
+
+%head{
+    font-weight: $fontweightBold;
+    position: relative;
+    margin-top: 20px;
+    text-transform: uppercase;
+    &:before{
+        position: absolute;
+        left: 0px;
+        width: 60px;
+        height: 2px;
+        top: -2px;
+        content: "";
+        background: $primaryHover;
+    }
+}
